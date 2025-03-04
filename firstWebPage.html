@@ -1,0 +1,86 @@
+<html>
+  <center><head><h2><u>Student Registration Form</u></h2></head></center>
+  <title>Registration Form</title>
+  <body>
+    <table align="center" bgcolor="beige" border="4" cellspacing="5" cellpadding="5">
+      <tr>
+        <td><b>Name</b></td>
+        <td><input type="text" name="name"></td>
+      </tr>
+      <tr>
+        <td><b>Branch</b></td>
+        <td>
+          <select name="branch">
+            <option value="select">--SELECT--</option>
+            <option value="CSE">CSE</option>
+            <option value="CSE(AI&ML)">CSE(AI&ML)</option>
+            <option value="CSE(DS)">CSE(DS)</option>
+            <option value="CSE(IoT)">CSE(IoT)</option>
+            <option value="CSIT">CSIT</option>
+            <option value="IT">IT</option>
+            <option value="ECE">ECE</option>
+            <option value="CIVIL">CIVIL</option>
+            <option value="AUTOM">AUTOM</option>
+            <option value="EEE">EEE</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><b>Roll No.</b></td>
+        <td><input type="text" name="rno"></td>
+      </tr>
+      <tr>
+        <td><b>Year</b></td>
+        <td>
+          <select name="year">
+            <option value="select">--SELECT--</option>
+            <option value="1">First Year</option>
+            <option value="2">Second Year</option>
+            <option value="3">Third Year</option>
+            <option value="4">Fourth Year</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><b>Contact No</b></td>
+        <td><input type="text" name="contact"></td>
+      </tr>
+      <tr>
+        <td><b>Gender</b></td>
+        <td>
+          <input type="radio" name="gender" value="male"> Male
+          <input type="radio" name="gender" value="female"> Female
+          <input type="radio" name="gender" value="Prefer Not to Say"> Prefer Not to Say
+        </td>
+      </tr>
+      <tr>
+        <td><b>Address</b></td>
+        <td><textarea rows="8" cols="30" name="address"></textarea></td>
+      </tr>
+      <tr>
+        <td><b>Skillset</b></td>
+        <td>
+          <input type="checkbox" name="skillset" value="Web Programming"> Web Programming
+          <br>
+          <input type="checkbox" name="skillset" value="Computer Networks"> Computer Networks
+          <br>
+          <input type="checkbox" name="skillset" value="Cyber Security"> Cyber Security
+          <br>
+          <input type="checkbox" name="skillset" value="Robotics"> Robotics
+          <br>
+          <input type="checkbox" name="skillset" value="Machine Learning"> Machine Learning
+          <br>
+          <input type="text" name="otherSkills"> Other 
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+
