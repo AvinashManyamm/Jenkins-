@@ -1,0 +1,96 @@
+## 1. Git Configuration
+
+git config --global user.name "Your Name"  # Set user name  
+git config --global user.email "your.email@example.com"  # Set user email  
+git config --list  # View current Git configuration  
+git config --global core.editor "vim"  # Set default editor  
+git config --global merge.tool "vimdiff"  # Set merge tool  
+
+## 2. Initialize & Clone
+
+git init  # Initialize a new Git repository  
+git clone <repository_url>  # Clone a remote repository  
+git clone <repository_url> <directory_name>  # Clone into a specific directory  
+
+## 3. Staging & Committing
+
+git status  # Check the status of your repository  
+git add <file>  # Add a specific file to staging  
+git add .  # Add all changes to staging  
+git commit -m "Your commit message"  # Commit changes with a message  
+git commit -am "Your commit message"  # Add & commit in one step (tracked files only)  
+git rm --cached <file>  # Remove a file from staging  
+git reset HEAD <file>  # Unstage a file  
+
+## 4. Branching & Merging
+
+git branch  # List all branches  
+git branch <branch_name>  # Create a new branch  
+git checkout <branch_name>  # Switch to a branch  
+git switch <branch_name>  # Alternative way to switch branches  
+git checkout -b <branch_name>  # Create and switch to a new branch  
+git switch -c <branch_name>  # Alternative way to create & switch  
+git merge <branch_name>  # Merge a branch into the current branch  
+git branch -d <branch_name>  # Delete a branch (safe, only if merged)  
+git branch -D <branch_name>  # Force delete a branch  
+
+## 5. Remote Repositories
+
+git remote -v  # Show remote URLs  
+git remote add origin <repository_url>  # Add a remote repository  
+git remote remove <remote_name>  # Remove a remote  
+git push -u origin <branch_name>  # Push a branch to the remote repository  
+git push origin --delete <branch_name>  # Delete a remote branch  
+git fetch origin  # Fetch updates from remote  
+git pull origin <branch_name>  # Pull latest changes from remote  
+
+## 6. Undoing Changes
+
+git reset --soft HEAD~1  # Undo last commit, keep changes staged  
+git reset --mixed HEAD~1  # Undo last commit, keep changes unstaged  
+git reset --hard HEAD~1  # Undo last commit, discard changes  
+git revert <commit_hash>  # Revert a commit  
+git checkout -- <file>  # Discard changes in a file  
+
+## 7. Viewing History
+
+git log  # View commit history  
+git log --oneline  # Compact commit history  
+git log --graph --oneline --all  # Visualize branches  
+git diff  # Show unstaged changes  
+git diff --staged  # Show staged changes  
+git blame <file>  # Show who changed each line in a file  
+
+## 8. Stashing Changes
+
+git stash  # Stash current changes  
+git stash list  # List all stashes  
+git stash apply  # Apply the latest stash  
+git stash drop  # Delete the latest stash  
+git stash clear  # Clear all stashes  
+
+## 9. Tagging
+
+git tag  # List all tags  
+git tag <tag_name>  # Create a new tag  
+git tag -a <tag_name> -m "Tag message"  # Create an annotated tag  
+git push origin <tag_name>  # Push a tag to remote  
+
+## 10. Rebasing & Cherry-Picking
+
+git rebase <branch_name>  # Rebase current branch onto another  
+git rebase -i HEAD~3  # Interactive rebase (edit last 3 commits)  
+git cherry-pick <commit_hash>  # Apply a specific commit to another branch  
+
+## 11. Git Ignore & Clean
+
+echo "node_modules/" >> .gitignore  # Ignore files  
+git clean -n  # See which files would be removed  
+git clean -f  # Remove untracked files  
+
+## 12. Submodules
+
+git submodule add <repository_url>  # Add a submodule  
+git submodule update --init --recursive  # Clone and initialize submodules  
+
+
